@@ -12,7 +12,7 @@
           "*://*/*/_layouts/15/CaseApp/CaseType/Metadata.aspx",
           "*://*/*/_layouts/15/listedit.aspx*"
       ],
-        "js": ["scripts/content.js"],
+        "js": ["scripts/displayInternalFieldName.js"],
         "css": ["styles.css"]
       },
       {
