@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "SharePoint Internal Field Name Viewer",
+    "name": "GO Internal Field Name Viewer",
     "version": "2.0",
     "description": "Displays internal field names on SharePoint metadata pages.",
     "permissions": [
@@ -8,10 +8,19 @@
         ],
     "content_scripts": [
       {
-        "matches": ["*://*/*/_layouts/15/CaseApp/CaseType/Metadata.aspx"],
-        "js": ["content.js"],
+        "matches": [
+          "*://*/*/_layouts/15/CaseApp/CaseType/Metadata.aspx",
+          "*://*/*/_layouts/15/listedit.aspx*"
+      ],
+        "js": ["scripts/content.js"],
+        "css": ["styles.css"]
+      },
+      {
+        "matches": [
+          "*://*/*/_layouts/15/ManageFeatures.aspx"
+        ],
+        "js": ["scripts/manageFeatures.js"],
         "css": ["styles.css"]
       }
     ]
 }
-  
